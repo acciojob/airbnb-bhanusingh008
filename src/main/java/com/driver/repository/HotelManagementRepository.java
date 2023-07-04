@@ -53,7 +53,7 @@ public class HotelManagementRepository {
 
         int user_id = booking.getBookingAadharCard();
 
-        if(!userMap.containsKey(user_id)) return 0;
+        if(!userMap.containsKey(user_id)) return -1;
 
         bookingMap.put(booking.getBookingId(), booking);
 
