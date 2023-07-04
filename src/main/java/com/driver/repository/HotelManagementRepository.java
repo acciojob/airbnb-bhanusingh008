@@ -93,7 +93,7 @@ public class HotelManagementRepository {
     public int getBookings(Integer aadharCard) {
         int check = aadharCard;
         if(!booking_byUser.containsKey(check)){
-            return 0;
+            return 2;
         }
         return booking_byUser.get(check);
     }
