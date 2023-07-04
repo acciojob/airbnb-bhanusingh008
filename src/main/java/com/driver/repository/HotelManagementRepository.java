@@ -59,6 +59,9 @@ public class HotelManagementRepository {
             int pricePer = hotel.getPricePerNight();
             int noOfRooms = booking.getNoOfRooms();
 
+            if(noOfRooms > hotel.getAvailableRooms()){
+                return -1;
+            }
             return pricePer*noOfRooms;
         }
 
