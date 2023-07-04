@@ -21,9 +21,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/hotel")
 public class HotelManagementController {
-
     HotelManagementService hms = new HotelManagementService();
-
     @PostMapping("/add-hotel")
     public String addHotel(@RequestBody Hotel hotel){
         //You need to add an hotel to the database
