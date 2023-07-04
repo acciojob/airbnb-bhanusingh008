@@ -17,7 +17,7 @@ public class HotelManagementRepository {
     HashMap<Integer, Integer> booking_byUser = new HashMap<>();
 
     public String addHotel(Hotel hotel) {
-        if(hotel==null){
+        if(hotel==null || hotel.getHotelName()==null){
             return "FAILURE";
         }
 
@@ -72,6 +72,9 @@ public class HotelManagementRepository {
     }
 
     public int getBookings(Integer aadharCard) {
+        if(!booking_byUser.containsKey(aadharCard)){
+            return 0;
+        }
         return booking_byUser.get(aadharCard);
     }
 
