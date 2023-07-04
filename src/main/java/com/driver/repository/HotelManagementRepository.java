@@ -51,6 +51,10 @@ public class HotelManagementRepository {
 
     public int bookARoom(Booking booking) {
 
+        int user_id = booking.getBookingAadharCard();
+
+        if(!userMap.containsKey(user_id)) return 0;
+
         bookingMap.put(booking.getBookingId(), booking);
 
         if(booking.getHotelName()==null){
