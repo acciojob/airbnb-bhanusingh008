@@ -54,6 +54,9 @@ public class HotelManagementRepository {
 
         bookingMap.put(booking.getBookingId(), booking);
 
+        if(booking.getHotelName()==null){
+            return 0;
+        }
         String hotelName = booking.getHotelName();
         int no_of_rooms_to_book = booking.getNoOfRooms();
         if(!hotelMap.containsKey(hotelName)){
