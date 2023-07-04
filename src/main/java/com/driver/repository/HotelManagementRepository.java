@@ -9,7 +9,6 @@ import java.util.HashMap;
 import java.util.List;
 
 public class HotelManagementRepository {
-
     HashMap<String , Hotel> hotelMap = new HashMap<>();
     HashMap<Integer, User> userMap = new HashMap<>();
     HashMap<String, Booking> bookingMap = new HashMap<>();
